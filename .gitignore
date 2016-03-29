@@ -36,7 +36,7 @@ public class JurnalFibonaci {
                 b = c;
             }
             
-            System.out.print("sudah hahay");
+            System.out.print("sudah hahay !");
         }
     }
 
