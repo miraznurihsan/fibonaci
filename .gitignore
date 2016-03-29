@@ -1,6 +1,43 @@
-touch README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/jurnalmod8/fibonaci.git
-git push -u origin master
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package jurnalfibonaci;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Praktikum
+ */
+public class JurnalFibonaci {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.print("Masukan jumlah deret : ");
+        Scanner input = new Scanner(System.in);
+        int deret = input.nextInt();
+        int a = 0, b = 1, c = 0;
+
+        if (deret == 1) {
+            System.out.print(a + " ");
+        } else if (deret == 2) {
+            System.out.print(a + " " + b + " ");
+        } else {
+            int tmp = deret - 2;
+            System.out.print("0 1 ");
+            for (int i = 0; i < tmp; i++) {
+                c = a + b;
+                System.out.print(c + " ");
+                a = b;
+                b = c;
+            }
+            
+            System.out.print("sudah hahay");
+        }
+    }
+
+}
